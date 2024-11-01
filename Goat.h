@@ -3,6 +3,7 @@
 #ifndef GOAT_H
 #define GOAT_H
 #include <iostream>
+#include <cstdlib> //rand()
 using namespace std;
 
 const int MAX_AGE = 20;
@@ -29,4 +30,5 @@ public:
     }
 };
 
-#endif
+
+#endif //GOAT_H
