@@ -19,6 +19,8 @@ void delete_goat(list<Goat> &trip);
 void add_goat(list<Goat> &trip, string[], string[]);
 void display_trip(list<Goat> trip);
 int main_menu();
+
+//Forking | Expanding the main menu 
 void sort_by_age(list<Goat>& trip);
 void sort_by_name(list<Goat>& trip);
 Goat find_oldest_goat(const list<Goat>& trip);
@@ -73,6 +75,7 @@ int main() {
                 cout << "Displaying goat data.\n";
                 display_trip(trip);
                 break;
+            // New Cases for Goat
             case 4:
                 sort_by_age(trip);
                 cout << "Goats sorted by age:\n";
@@ -126,6 +129,7 @@ int main_menu() {
     cout << "[2] Delete a goat\n";
     cout << "[3] List goats\n";
     cout << "[4] Sort goats by age\n";
+    // adding 8 more options
     cout << "[5] Sort goats by name\n";
     cout << "[6] Find the oldest goat\n";
     cout << "[7] Find the youngest goat\n";
@@ -172,7 +176,6 @@ void display_trip(list<Goat> trp) {
              << " (" << gt.get_age()
              << ", " << gt.get_color() << ")\n";
 }
-
 int select_goat(list<Goat> trp) {
     int input;
     cout << "Make a selection:\n";
@@ -186,6 +189,7 @@ int select_goat(list<Goat> trp) {
     return input;
 }
 
+// Voids for the new options
 void sort_by_age(list<Goat>& trip) {
     trip.sort([](const Goat& a, const Goat& b) { return a.get_age() < b.get_age(); });
 }
